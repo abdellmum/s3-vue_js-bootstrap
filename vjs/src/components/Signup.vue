@@ -2,20 +2,20 @@
   <div class="vue-tempalte">
     <div class="testt">
       <form>
-        <h3>Sign Up</h3>
+        <h3>{{ inscription }}</h3>
 
         <div class="form-group">
-          <label>Full Name</label>
+          <label>{{ name }}</label>
           <input type="text" class="form-control form-control-lg" />
         </div>
 
         <div class="form-group">
-          <label>Email address</label>
+          <label>{{ signUpMail }}</label>
           <input type="email" class="form-control form-control-lg" />
         </div>
 
         <div class="form-group">
-          <label>Password</label>
+          <label>{{ password }}</label>
           <input type="password" class="form-control form-control-lg" />
         </div>
 
@@ -34,8 +34,16 @@
 
 <script>
 export default {
-  data () {
-    return {}
+  name: "app",
+  data() {
+    return {
+      inscription: "sign up",
+      name: "Full Name",
+      signUpMail: "Email address",
+      msg: "Welcome to Your Vue.js App",
+      mail: "Email",
+      password: "Password"
+    };
   }
-}
+};
 </script>

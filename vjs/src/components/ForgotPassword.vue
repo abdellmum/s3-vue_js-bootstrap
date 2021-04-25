@@ -2,15 +2,15 @@
   <div class="vue-tempalte">
     <div class="testt">
       <form>
-        <h3>Forgot Password</h3>
+        <h3>{{ tittle }}</h3>
 
         <div class="form-group">
-          <label>Email address</label>
+          <label>{{ mail }}</label>
           <input type="email" class="form-control form-control-lg" />
         </div>
 
         <button type="submit" class="btn btn-dark btn-lg btn-block">
-          Reset password
+          {{ reset }}
         </button>
       </form>
     </div>
@@ -19,8 +19,13 @@
 
 <script>
 export default {
-  data () {
-    return {}
+  data() {
+    return {
+      tittle: "Forgot password",
+
+      reset: "Reset password",
+      mail: "Email adress"
+    };
   }
-}
+};
 </script>
